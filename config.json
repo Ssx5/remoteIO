@@ -1,0 +1,148 @@
+{
+    "mqtt_server": {
+        "ip": "127.0.0.1",
+        "port": 8883,
+        "username": "",
+        "password": "",
+        "client_id" : "client-device",
+        "clean_session": true,
+        "ssl/tls_enable":true,
+        "cafile":"/home/song12300560/Desktop/remoteIOwithSSL/ca_certificates/ca.crt",
+        "capath":"/home/song12300560/Desktop/remoteIOwithSSL/ca_certificates",
+        "certfile":"/home/song12300560/Desktop/remoteIOwithSSL/client.crt",
+        "keyfile":"/home/song12300560/Desktop/remoteIOwithSSL/client.key",
+        "tls_version":"1.2"
+    },
+    "modbus_info": {
+        "ip": "192.168.1.200",
+        "port": 502,
+        "slave": 1,
+        "period_ms": 1000
+    },
+    "resources": [
+        {
+            "name": "RL1",
+            "operation_get": {
+                "func_code": 1,
+                "start_addr": 16,
+                "count": 1,
+                "topic": "/device/RL1/read",
+                "qos":0
+            },
+            "operation_set": {
+                "func_code": 5,
+                "start_addr": 16,
+                "topic": "/device/RL1/write",
+                "qos":0
+            }
+        },
+        {
+            "name": "RL2",
+            "operation_get": {
+                "func_code": 1,
+                "start_addr": 17,
+                "count": 1,
+                "topic": "/device/RL2/read",
+                "qos":0
+            },
+            "operation_set": {
+                "func_code": 5,
+                "start_addr": 17,
+                "topic": "/device/RL2/write",
+                "qos":0
+            }
+        },
+        {
+            "name": "RL3",
+            "operation_get": {
+                "func_code": 1,
+                "start_addr": 18,
+                "count": 1,
+                "topic": "/device/RL3/read",
+                "qos":0
+            },
+            "operation_set": {
+                "func_code": 5,
+                "start_addr": 18,
+                "topic": "/device/RL3/write",
+                "qos":0
+            }
+        },
+        {
+            "name": "RL4",
+            "operation_get": {
+                "func_code": 1,
+                "start_addr": 19,
+                "count": 1,
+                "topic": "/device/RL4/read",
+                "qos":0
+            },
+            "operation_set": {
+                "func_code": 5,
+                "start_addr": 19,
+                "topic": "/device/RL4/write",
+                "qos":0
+            }
+        },
+        {
+            "name": "DI1",
+            "operation_get": {
+                "func_code": 1,
+                "start_addr": 0,
+                "count": 1,
+                "topic": "/device/DI1/read",
+                "qos":0
+            }
+        },
+        {
+            "name": "DI2",
+            "operation_get": {
+                "func_code": 1,
+                "start_addr": 1,
+                "count": 1,
+                "topic": "/device/DI2/read",
+                "qos":0
+            }
+        },
+        {
+            "name": "DI3",
+            "operation_get": {
+                "func_code": 1,
+                "start_addr": 2,
+                "count": 1,
+                "topic": "/device/DI3/read",
+                "qos":0
+            }
+        },
+        {
+            "name": "DI4",
+            "operation_get": {
+                "func_code": 1,
+                "start_addr": 3,
+                "count": 1,
+                "topic": "/device/DI4/read",
+                "qos":0
+            }
+        },
+        {
+            "name": "AI1",
+            "operation_get": {
+                "func_code": 4,
+                "start_addr": 0,
+                "count": 1,
+                "topic": "/device/AI1/read",
+                "qos":0
+            }
+        },
+        {
+            "name": "AI2",
+            "operation_get": {
+                "func_code": 4,
+                "start_addr": 1,
+                "count": 1,
+                "topic": "/device/AI2/read",
+                "qos":0
+            }
+        }
+    ]
+}
